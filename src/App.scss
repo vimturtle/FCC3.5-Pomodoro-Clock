@@ -1,0 +1,12 @@
+@import url('https://use.fontawesome.com/releases/v5.7.0/css/all.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+body {
+  background-color: rgb(231, 222, 222);
+  font-family: 'Alata', sans-serif;
+
+  ::selection {
+    background-color: rgb(223, 214, 214);
+  }
+}
