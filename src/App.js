@@ -21,6 +21,9 @@ const App = () => {
         setTimerSeconds((timerSeconds) => timerSeconds - 1);
         phaseControl();
       }, 1000);
+      if (timerSeconds === 0) {
+        audioRef.current.play();
+      }
     } else if (!timerState && timerSeconds !== 0) {
       clearInterval(interval);
     }
@@ -84,8 +87,6 @@ const App = () => {
 
   const phaseControl = () => {
     if (timerSeconds === 0) {
-      audioRef.current.play();
-
       if (timerType === 'Session') {
         switchTimerType(breakLength * 60, 'Break');
       } else {
